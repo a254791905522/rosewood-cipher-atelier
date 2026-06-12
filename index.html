@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rosewood Cipher Atelier</title>
+  <meta name="description" content="Rosewood Cipher Atelier is a color-and-position logic deduction puzzle game for iOS.">
+  <style>
+    :root {
+      --bg:#1a1210; --panel:#2d1f1b; --panel2:#3d2a24; --text:#f5ede8; --muted:#c4b5ab;
+      --green:#5cb85c; --blue:#5bc0de; --orange:#f0ad4e; --red:#d9534f; --gold:#ffd700; --line:rgba(255,255,255,.12);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; color:var(--text); background:radial-gradient(circle at top, #4a3028 0, var(--bg) 48%, #0f0907 100%); }
+    a { color:var(--gold); }
+    .wrap { width:min(1120px, calc(100% - 32px)); margin:0 auto; }
+    .hero { padding:72px 0 44px; text-align:center; }
+    .badge { display:inline-flex; gap:8px; align-items:center; padding:8px 14px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.08); color:var(--gold); font-weight:700; }
+    h1 { margin:22px 0 12px; font-size:clamp(44px, 8vw, 86px); line-height:.95; letter-spacing:-.06em; }
+    .subtitle { margin:0 auto; max-width:760px; color:var(--muted); font-size:clamp(18px, 3vw, 24px); line-height:1.5; }
+    .intro { margin:24px auto 0; max-width:760px; color:#e8dbd3; font-size:17px; line-height:1.75; }
+    .screens { padding:32px 0 48px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); gap:20px; align-items:start; }
+    .shot-card { background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04)); border:1px solid var(--line); border-radius:28px; padding:14px; box-shadow:0 24px 60px rgba(0,0,0,.32); }
+    .shot-card img { width:100%; border-radius:20px; display:block; box-shadow:0 14px 30px rgba(0,0,0,.34); }
+    .shot-card h3 { margin:14px 6px 6px; font-size:18px; }
+    .shot-card p { margin:0 6px 8px; color:var(--muted); line-height:1.45; font-size:14px; }
+    section { padding:36px 0; }
+    h2 { font-size:34px; margin:0 0 20px; letter-spacing:-.03em; }
+    .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+    .card { background:rgba(255,255,255,.08); border:1px solid var(--line); border-radius:24px; padding:22px; }
+    .card h3 { margin:0 0 8px; font-size:19px; }
+    .card p, .card li { color:var(--muted); line-height:1.65; }
+    .info { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+    .info div { padding:16px; border-radius:18px; background:rgba(255,255,255,.07); border:1px solid var(--line); }
+    .label { color:var(--muted); font-size:13px; text-transform:uppercase; letter-spacing:.08em; }
+    .value { margin-top:5px; font-weight:800; }
+    .peg-demo { display:inline-flex; gap:6px; align-items:center; margin:0 4px; }
+    .peg { width:16px; height:16px; border-radius:50%; display:inline-block; border:2px solid rgba(255,255,255,.3); }
+    .peg.white { background:#fff; }
+    .peg.black { background:#333; border-color:#555; }
+    footer { padding:36px 0 52px; text-align:center; color:var(--muted); border-top:1px solid var(--line); margin-top:40px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero wrap">
+      <div class="badge">Color Code Logic Puzzle</div>
+      <h1>Rosewood Cipher Atelier</h1>
+      <p class="subtitle">Deduce the secret color sequence using precise feedback clues. White peg means perfect match, black peg means right color wrong position.</p>
+      <p class="intro">Rosewood Cipher Atelier is a single-player logic deduction game where you crack hidden color codes within a limited number of attempts. Each guess returns immediate feedback: <span class="peg-demo"><span class="peg white"></span> exact match</span> and <span class="peg-demo"><span class="peg black"></span> color only</span>, letting you narrow the solution with pure reasoning.</p>
+    </header>
+
+    <section class="screens wrap">
+      <div class="grid">
+        <article class="shot-card">
+          <img src="images/menu.png" alt="Main Menu" loading="lazy">
+          <h3>Main Menu</h3>
+          <p>Start a Classic game, tackle the Daily Challenge, or review your statistics.</p>
+        </article>
+        <article class="shot-card">
+          <img src="images/game1.png" alt="Gameplay" loading="lazy">
+          <h3>Make Your Guess</h3>
+          <p>Select colored balls from the palette and place them in sequence, then submit to verify.</p>
+        </article>
+        <article class="shot-card">
+          <img src="images/game2.png" alt="Feedback" loading="lazy">
+          <h3>Read the Clues</h3>
+          <p>White pegs show exact matches. Black pegs show correct colors in wrong positions. Use logic to refine your next attempt.</p>
+        </article>
+        <article class="shot-card">
+          <img src="images/game3.png" alt="Level Progress" loading="lazy">
+          <h3>Multiple Difficulties</h3>
+          <p>Progress from 4-ball beginner puzzles to harder challenges with more colors and longer codes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>Features</h2>
+      <div class="feature-grid">
+        <div class="card">
+          <h3>Pure Logic Gameplay</h3>
+          <p>No luck needed — every puzzle is solvable through deduction. Analyze feedback, eliminate possibilities, and crack the code.</p>
+        </div>
+        <div class="card">
+          <h3>Clear Feedback System</h3>
+          <p>Each guess returns white pegs (exact matches) and black pegs (color-only matches), giving you precise information to work with.</p>
+        </div>
+        <div class="card">
+          <h3>Progressive Difficulty</h3>
+          <p>Multiple modes with varying code lengths and color pools. Beginners start with 4 balls; experts face longer sequences.</p>
+        </div>
+        <div class="card">
+          <h3>Daily Challenge</h3>
+          <p>A new shared puzzle every day. Solve the same code as players around the world and compare your efficiency.</p>
+        </div>
+        <div class="card">
+          <h3>Track Your Skills</h3>
+          <p>View solve streaks, best attempt counts, and personal statistics to measure your logical reasoning improvement.</p>
+        </div>
+        <div class="card">
+          <h3>Offline &amp; Private</h3>
+          <p>Play anywhere without internet. No ads, no accounts, no tracking, and no data collection.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>How to Play</h2>
+      <div class="card" style="max-width:760px;">
+        <p style="color:var(--muted);line-height:1.75;">
+          1. The game secretly selects a sequence of colored balls.<br>
+          2. You place your guess by selecting colors and arranging them in order.<br>
+          3. Tap <strong>Verify</strong> to submit your guess.<br>
+          4. Receive feedback: a <span class="peg white" style="vertical-align:middle;"></span> white peg means one ball is correct in both color and position; a <span class="peg black" style="vertical-align:middle;"></span> black peg means a color exists in the code but is placed in a different slot.<br>
+          5. Use the clues to refine your next guess. Crack the code before you run out of attempts!
+        </p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>App Info</h2>
+      <div class="info">
+        <div><div class="label">Platform</div><div class="value">iPhone &amp; iPad</div></div>
+        <div><div class="label">Requires</div><div class="value">iOS 13.0+</div></div>
+        <div><div class="label">Category</div><div class="value">Games / Puzzle</div></div>
+        <div><div class="label">Age Rating</div><div class="value">4+</div></div>
+        <div><div class="label">In-App Purchases</div><div class="value">None</div></div>
+        <div><div class="label">Ads</div><div class="value">None</div></div>
+        <div><div class="label">Internet</div><div class="value">Not Required</div></div>
+        <div><div class="label">Privacy</div><div class="value"><a href="privacy.html">Privacy Policy</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>&copy; 2026 Rosewood Cipher Atelier. All rights reserved.</p>
+    <p style="margin-top:8px;font-size:14px;"><a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
